@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Artist Application - GHOST</title>
+    <script src="/dist/components.js"></script>
+    <script type="module" src="/dist/firebase.js"></script>
+    <script src="/dist/CRUD.js"></script>
+    <link rel="stylesheet" href="/dist/styles.css" />
+    <script
+      src="/board-and-heads-of-the-committee/index.js"
+      type="module"
+    ></script>
+    <script>
+      window.sendMessageToParent = function(dataObject) {
+           window.parent.postMessage(dataObject, '*');
+      }
+      
+    </script>
+    <script>
+    
+    </script>
+
+<script src="https://kit.fontawesome.com/4550fec5ff.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 10px;
+        /* background-color: #f4f4f4; */
+      }
+    </style>
+    <style>
+      #committee-positions b {
+        text-wrap: nowrap;
+        
+      }
+     
+      @media (max-width: 900px) {
+                  #committee-positions b {
+                      text-wrap: wrap;              
+                    }
+              }
+
+      #committee-positions ol {
+        list-style: none;
+      }
+
+      #committee-positions li.role:has(input[type='checkbox']:not(:checked)) {
+        background: yellow;
+        width: fit-content;
+        color: black;
+       
+      }
+
+      .info-icon {
+        position: absolute;
+        /* left: 0; */
+        scale: 0.7;
+        translate: -11px -3px;
+        opacity: 0.3;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+      .info-icon:hover {
+        opacity: 1;
+      }
+      .responsibility {
+        margin-left: 5px;
+      }
+      .tasks {
+        /* margin-left: 63px; */
+      }
+      li.role {
+        display: grid;
+        align-items: baseline;
+        grid-template-columns: 171px 1fr;
+      }
+      .user-name:not(:empty) {
+        /* border: 1px solid springgreen; */
+        margin-left: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000;
+        padding: 3px 5px;
+        margin: 5px 10px 0px 0px;
+        text-wrap: nowrap;
+        font-weight: bold;
+        text-decoration: underline;
+
+      }
+
+
+    </style>
+  </head>
+
+  <body style="">
+    <header-component slotLinks="members"></header-component>
+
+    <div class="container"></div>
+
+    <footer-component></footer-component>
+  </body>
+</html>
